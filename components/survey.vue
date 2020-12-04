@@ -1,14 +1,25 @@
 <template>
   <div class="survey">
-    <Params />
-
-    <Questions />
-
-    <Logic />
-
-    <Respondents />
-
-    <Conditions />
+    <div class="survey__navigation">
+      <button class="survey__button" @click="setCop('Params')">
+        Параметры
+      </button>
+      <button class="survey__button" @click="setCop('Questions')">
+        Вопросы
+      </button>
+      <button class="survey__button" @click="setCop('Logic')">
+        Логика
+      </button>
+      <button class="survey__button" @click="setCop('Respondents')">
+        Респонденты
+      </button>
+      <button class="survey__button" @click="setCop('Conditions')">
+        Условия
+      </button>
+    </div>
+    <keep-alive>
+      <component :is="component" />
+    </keep-alive>
   </div>
 </template>
 
@@ -23,7 +34,12 @@ export default {
   components: { Conditions, Respondents, Logic, Questions, Params },
   data () {
     return {
-      activeItem: 'home'
+      component: 'Params'
+    }
+  },
+  methods: {
+    setCop (value) {
+      this.component = value
     }
   }
 }
@@ -34,6 +50,8 @@ export default {
     margin-top: 40px;
 
     .survey__navigation {
+      display: flex;
+      justify-content: space-between;
 
       .survey__button {
         border: none;
