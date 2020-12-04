@@ -26,11 +26,6 @@ export default {
     return {
       compList: true
     }
-  },
-
-  methods: {
-    showCompList () {
-    }
   }
 }
 </script>
