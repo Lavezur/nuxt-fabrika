@@ -10,11 +10,11 @@
       <button class="survey__button" @click="setCop('Logic')">
         Логика
       </button>
-      <button class="survey__button" @click="setCop('Respondents')">
-        Респонденты
-      </button>
       <button class="survey__button" @click="setCop('Conditions')">
         Условия
+      </button>
+      <button class="survey__button" @click="setCop('Respondents')">
+        Респонденты
       </button>
     </div>
     <keep-alive>

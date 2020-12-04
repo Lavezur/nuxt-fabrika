@@ -1,5 +1,7 @@
 <template>
-  <div>PARAMS</div>
+  <div class="params">
+    PARAMS
+  </div>
 </template>
 
 <script>
