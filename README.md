@@ -1,4 +1,4 @@
-# nuxt-fabrika
+# nuxt-spa 
 
 ## Build Setup
 
